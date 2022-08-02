@@ -1,0 +1,100 @@
+.header {
+  height: 95vh;
+  border-radius: 1rem;
+  color: #e9ecef;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+}
+
+/* Header Left */
+
+.header-left {
+  background-image: linear-gradient(#101d2cd9, #101d2cd9),
+    url("../../images/header/header.jpg");
+  background-size: cover;
+  background-position: 50% 100%;
+  display: grid;
+  justify-content: center;
+}
+
+/* Header Right */
+
+.header-right {
+  background: #101d2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right h3 {
+  grid-column: span 2;
+  margin: 0 auto 1.8rem;
+  color: #d9480f;
+}
+
+/* Chefs */
+
+.chefs {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  column-gap: 2rem;
+  row-gap: 5vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  transform: translateY(-25%);
+}
+
+.chefs img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #dee2e6;
+}
+
+.chef-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.chef-position {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+/* Customers */
+
+.customers-container {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.customers {
+  display: flex;
+}
+
+.customers img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 2px solid #dee2e6;
+}
+
+.customers img:last-child {
+  margin: 0;
+}
+
+.customers-text {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.customers-text span {
+  color: #d9480f;
+  font-weight: 700;
+}
