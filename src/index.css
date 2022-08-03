@@ -1,3 +1,7 @@
+:root {
+  --color-main: #c69963;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,4 +17,16 @@ body {
   font-family: "Rubik", sans-serif;
   background: #f1f3f5;
   padding: 2.4rem;
+}
+
+/* Reusable Code */
+
+.btn {
+  text-decoration: none;
+  background-color: var(--color-main);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 auto;
+  padding: 1.6rem 3.2rem;
+  border-radius: 5rem;
 }
