@@ -4,6 +4,7 @@
   color: #e9ecef;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  box-shadow: 1rem 0 3.2rem rgba(0, 0, 0, 0.8);
 }
 
 /* Header Left */
@@ -68,10 +69,12 @@
 .featured-in__heading {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
-  column-gap: 1.5rem;
   align-items: center;
+  column-gap: 1.5rem;
   color: #aaa;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
   margin-bottom: 3.2rem;
 }
 
@@ -108,6 +111,7 @@
   grid-column: span 2;
   margin: 0 auto 1.8rem;
   color: var(--color-main);
+  font-family: "Rubik", sans-serif;
 }
 
 /* Chefs */

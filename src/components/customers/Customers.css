@@ -1,0 +1,74 @@
+.customers-section {
+  padding: 8rem 3.2rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  background-color: #101d2c80;
+  box-shadow: 1rem 0 3.2rem rgba(0, 0, 0, 0.8);
+}
+
+.section-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-main);
+  text-align: center;
+  margin-bottom: 2.4rem;
+  display: inline-block;
+  transition: all 0.4s;
+}
+
+.section-heading:hover {
+  letter-spacing: 5px;
+}
+
+.section-subheading {
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 4.8rem;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* Customers Review */
+
+.customers-slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4.8rem;
+  text-align: left;
+  color: #222;
+  line-height: 1.8;
+  padding: 0 2.4rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.customer-card {
+  background: linear-gradient(to right bottom, #adb5bd, var(--color-main));
+  padding: 3.2rem 4.8rem;
+  border-radius: 3px;
+}
+
+.customer-details {
+  display: flex;
+  align-items: center;
+  column-gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.customer-card img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #dee2e6;
+}
+
+.customer-job,
+.date {
+  font-size: 1.5rem;
+}
+
+.date {
+  margin-top: 2.4rem;
+  font-style: italic;
+  color: #444;
+  text-decoration: underline;
+}
