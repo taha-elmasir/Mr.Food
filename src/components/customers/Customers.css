@@ -1,9 +1,12 @@
 .customers-section {
-  padding: 8rem 3.2rem;
+  padding: 8rem 0rem;
   text-align: center;
   border-top: 1px solid #ddd;
   background-color: #101d2c80;
   box-shadow: 1rem 0 3.2rem rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(#101d2cd9, #101d2cd9),
+    url("../../images/reviews/restaurant.jpg");
+  background-size: cover;
 }
 
 .section-heading {
@@ -30,18 +33,27 @@
 
 /* Customers Review */
 
-.customers-slider {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4.8rem;
-  text-align: left;
-  color: #222;
-  line-height: 1.8;
-  padding: 0 2.4rem;
-  font-family: "Work Sans", sans-serif;
+.reviews {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.customer-card {
+.slide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 6.4rem;
+  text-align: left;
+  color: #222;
+  /* padding: 0 6rem; */
+  line-height: 1.8;
+  font-family: "Work Sans", sans-serif;
+  position: absolute;
+  transition: all 1s;
+}
+
+.review {
   background: linear-gradient(to right bottom, #adb5bd, var(--color-main));
   padding: 3.2rem 4.8rem;
   border-radius: 3px;
@@ -54,7 +66,7 @@
   margin-bottom: 3.2rem;
 }
 
-.customer-card img {
+.review img {
   width: 7rem;
   border-radius: 50%;
   display: block;
@@ -71,4 +83,27 @@
   font-style: italic;
   color: #444;
   text-decoration: underline;
+}
+
+/* Dots */
+
+.dots {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border: 2px solid var(--color-main);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.active-dot {
+  background-color: var(--color-main);
 }
