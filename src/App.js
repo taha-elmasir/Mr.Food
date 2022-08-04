@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 
 import Header from "./components/header/Header";
+import Features from "./components/features/Features";
 import Customers from "./components/customers/Customers";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <Fragment>
       <Header />
       <Customers />
+      <Features />
     </Fragment>
   );
 };

@@ -1,0 +1,30 @@
+.features-section {
+  padding: 9.6rem 6.4rem;
+  box-shadow: 1rem 0 3.2rem rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.features-section .section-subheading {
+  margin-bottom: 8rem;
+  font-size: 1.7rem;
+}
+
+.features {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4.8rem;
+  row-gap: 8rem;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1.5rem;
+}
+
+.feature-text {
+  grid-column: span 1 / -1;
+  line-height: 1.8;
+  font-family: "Work Sans", sans-serif;
+}

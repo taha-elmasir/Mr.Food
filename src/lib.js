@@ -1,3 +1,5 @@
+// Scroll
+
 export const scroll = (e) => {
   e.preventDefault();
 
@@ -7,6 +9,8 @@ export const scroll = (e) => {
   }
 };
 
+// revealing sections
+
 export const reveal = (ref, margin) => {
   const show = ([entry], observer) => {
     entry.isIntersecting && ref.current.classList.remove("hidden");
@@ -15,13 +19,15 @@ export const reveal = (ref, margin) => {
 
   const options = {
     root: null,
-    threshold: 0.15,
+    threshold: 0.1,
     rootMargin: margin,
   };
 
   const observer = new IntersectionObserver(show, options);
   observer.observe(ref.current);
 };
+
+// the slider
 
 export const slide = (dots, slides) => {
   slides.forEach((r, i) => (r.style.transform = `translateX(${i * 100}%)`));
@@ -37,6 +43,7 @@ export const slide = (dots, slides) => {
       document
         .querySelector(`.dot[data-nav='${nav}']`)
         .classList.add("active-dot");
+
       document
         .querySelectorAll(".slide")
         .forEach(

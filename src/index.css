@@ -31,3 +31,40 @@ body {
   padding: 1.6rem 3.2rem;
   border-radius: 5rem;
 }
+
+.hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.feature-icon {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem;
+  grid-row: 1 / span 2;
+  transform: translateY(-1rem);
+}
+
+/* Heading */
+
+.section-heading {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-main);
+  text-align: center;
+  margin-bottom: 2.4rem;
+  display: inline-block;
+  transition: all 0.4s;
+}
+
+.section-heading:hover {
+  letter-spacing: 5px;
+}
+
+.section-subheading {
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 4.8rem;
+  line-height: 1.7;
+  color: #ddd;
+}

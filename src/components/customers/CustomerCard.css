@@ -1,0 +1,54 @@
+.review {
+  background: linear-gradient(to right bottom, #adb5bd, var(--color-main));
+  padding: 3.2rem 4.8rem;
+  border-radius: 3px;
+}
+
+.customer-details {
+  display: flex;
+  align-items: center;
+  column-gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.review img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid #dee2e6;
+}
+
+.customer-job,
+.date {
+  font-size: 1.5rem;
+}
+
+.date {
+  margin-top: 2.4rem;
+  font-style: italic;
+  color: #444;
+  text-decoration: underline;
+}
+
+/* Dots */
+
+.dots {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border: 2px solid var(--color-main);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.active-dot {
+  background-color: var(--color-main);
+}
