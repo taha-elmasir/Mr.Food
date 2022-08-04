@@ -1,0 +1,15 @@
+.feature {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1.5rem;
+  color: #e9ecef;
+}
+
+.feature-text {
+  line-height: 1.8;
+  font-family: "Work Sans", sans-serif;
+}
+
+.feature-heading {
+  font-size: 2rem;
+}

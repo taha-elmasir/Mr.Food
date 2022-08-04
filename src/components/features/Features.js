@@ -1,8 +1,15 @@
 import "./Features.css";
+import FeatureItem from "./FeatureItem";
 
 // Icons
-
-import { Healthy } from "../../icons/features/healthy";
+import {
+  Healthy,
+  Pie,
+  World,
+  Heart,
+  Lock,
+  Chef,
+} from "../../icons/features/healthy";
 
 const Features = () => {
   return (
@@ -14,60 +21,48 @@ const Features = () => {
         Mr. Food AI chooses from 10k recipes and more.
       </p>
       <div className="features">
-        <div className="feature">
-          <Healthy />
-          <h4 className="feature-heading">Our food is healthy and tasty</h4>
-          <p className="feature-text">
-            Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
+        <FeatureItem
+          title="Our food is healthy and tasty"
+          text="Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
             Pellentesque dapibus vel ex a convallis. Praesent vel pulvinar
-            ligula, ac auctor augue.
-          </p>
-        </div>
-        <div className="feature">
-          <Healthy />
-          <h4 className="feature-heading">Our food is healthy and tasty</h4>
-          <p className="feature-text">
-            Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
+            ligula, ac auctor augue."
+          icon={Healthy}
+        />
+        <FeatureItem
+          title="Local and organic"
+          text="Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
             Pellentesque dapibus vel ex a convallis. Praesent vel pulvinar
-            ligula, ac auctor augue.
-          </p>
-        </div>
-        <div className="feature">
-          <Healthy />
-          <h4 className="feature-heading">Our food is healthy and tasty</h4>
-          <p className="feature-text">
-            Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
+            ligula, ac auctor augue."
+          icon={Pie}
+        />
+        <FeatureItem
+          title="World's best healthy Food"
+          text="Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
             Pellentesque dapibus vel ex a convallis. Praesent vel pulvinar
-            ligula, ac auctor augue.
-          </p>
-        </div>
-        <div className="feature">
-          <Healthy />
-          <h4 className="feature-heading">Our food is healthy and tasty</h4>
-          <p className="feature-text">
-            Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
+            ligula, ac auctor augue."
+          icon={World}
+        />
+        <FeatureItem
+          title="Live a healthier life"
+          text="Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
             Pellentesque dapibus vel ex a convallis. Praesent vel pulvinar
-            ligula, ac auctor augue.
-          </p>
-        </div>
-        <div className="feature">
-          <Healthy />
-          <h4 className="feature-heading">Our food is healthy and tasty</h4>
-          <p className="feature-text">
-            Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
+            ligula, ac auctor augue."
+          icon={Heart}
+        />
+        <FeatureItem
+          title="Secure payments on Mr.Food"
+          text="Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
             Pellentesque dapibus vel ex a convallis. Praesent vel pulvinar
-            ligula, ac auctor augue.
-          </p>
-        </div>
-        <div className="feature">
-          <Healthy />
-          <h4 className="feature-heading">Our food is healthy and tasty</h4>
-          <p className="feature-text">
-            Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
+            ligula, ac auctor augue."
+          icon={Lock}
+        />
+        <FeatureItem
+          title="pause your subscription any time"
+          text="Maecenas aliquet tortor ac lorem sagittis, vulputate turpis dictum.
             Pellentesque dapibus vel ex a convallis. Praesent vel pulvinar
-            ligula, ac auctor augue.
-          </p>
-        </div>
+            ligula, ac auctor augue."
+          icon={Chef}
+        />
       </div>
     </section>
   );

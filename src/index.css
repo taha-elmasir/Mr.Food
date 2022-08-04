@@ -38,9 +38,9 @@ body {
 }
 
 .feature-icon {
-  fill: #c69963;
-  width: 4.5rem;
-  height: 4.5rem;
+  fill: var(--color-main);
+  width: 4.8rem;
+  height: 4.8rem;
   grid-row: 1 / span 2;
   transform: translateY(-1rem);
 }
