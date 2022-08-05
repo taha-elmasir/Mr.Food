@@ -1,3 +1,5 @@
+import { useRef, useEffect } from "react";
+import { reveal } from "../../lib";
 import "./Features.css";
 import FeatureItem from "./FeatureItem";
 
@@ -12,8 +14,10 @@ import {
 } from "../../icons/features/healthy";
 
 const Features = () => {
+  const featuresRef = useRef();
+  useEffect(() => reveal(featuresRef), [featuresRef]);
   return (
-    <section className="features-section">
+    <section className="features-section hidden" ref={featuresRef}>
       <h2 className="section-heading">
         Mr. Food combines food with modern technology
       </h2>

@@ -1,13 +1,12 @@
 .features-section {
   padding: 9.6rem 6.4rem;
   border-top: 1px solid #ddd;
-  background: rgba(24, 100, 171, 0.9);
   background: linear-gradient(
     to right bottom,
     rgba(24, 100, 171, 0.4),
     #212529
   );
-
+  transition: all 0.9s;
   box-shadow: 1rem 0 3.2rem rgba(0, 0, 0, 0.8);
   text-align: center;
 }

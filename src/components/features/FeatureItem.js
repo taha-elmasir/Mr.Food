@@ -1,4 +1,4 @@
-import FeaturedItemStyle from "./FeatureItem.css";
+import "./FeatureItem.css";
 
 const FeaturedItem = (props) => (
   <div className="feature">

@@ -45,6 +45,12 @@ body {
   transform: translateY(-1rem);
 }
 
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: var(--color-main);
+}
+
 /* Heading */
 
 .section-heading {
