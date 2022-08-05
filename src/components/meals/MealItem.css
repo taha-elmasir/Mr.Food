@@ -6,7 +6,7 @@
   width: 90%;
   display: flex;
   flex-direction: column;
-  row-gap: 3.2rem;
+  row-gap: 4.8rem;
   color: #e9ecef;
 }
 
@@ -59,18 +59,18 @@
 
 .meal-tags {
   display: flex;
-  column-gap: 1.2rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.8rem;
-  grid-column: 1 / -1;
+  column-gap: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
 }
 
 .tag {
   display: inline-block;
   padding: 0.8rem 1rem;
-  border-radius: 4rem;
-  font-size: 1.4rem;
+  border-radius: 3px;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -85,6 +85,7 @@
 .meal-text {
   grid-column: 1 / -1;
   line-height: 1.6;
+  font-family: "Work Sans", sans-serif;
 }
 
 .meal-item {
@@ -111,6 +112,7 @@
   justify-self: end;
   grid-row: 1 / 3;
   grid-column: 2 / -1;
+  border-radius: 3px;
 }
 
 .meal-price,

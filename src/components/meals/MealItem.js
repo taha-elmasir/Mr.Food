@@ -14,13 +14,13 @@ const MealItem = (props) => (
         <img src={Seafood} alt="Seafood paella" />
       </div>
       <h3 className="meal-heading">{props.title}</h3>
+      <div className="meal-tags">
+        <span className="tag seafood">Seafood</span>
+        <span className="tag vegetarian">Vegetarian</span>
+      </div>
     </div>
 
     <div className="meal-middle">
-      <h4 className="meal-tags">
-        <span className="tag seafood">Seafood</span>
-        <span className="tag vegetarian">Vegetarian</span>
-      </h4>
       <p className="meal-text">
         Quisque imperdiet nisl ante, sit amet sollicitudin lorem sagittis in.
       </p>

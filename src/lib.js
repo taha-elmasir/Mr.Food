@@ -1,16 +1,14 @@
 // Scroll
-
 export const scroll = (e) => {
   e.preventDefault();
-
-  if (e.target.hasAttribute("href")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-  }
+  e.target.getAttribute("href") === "#" &&
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
 };
 
 // revealing sections
-
 export const reveal = (ref, margin) => {
   const show = ([entry], observer) => {
     entry.isIntersecting && ref.current.classList.remove("hidden");
@@ -28,7 +26,6 @@ export const reveal = (ref, margin) => {
 };
 
 // the slider
-
 export const slide = (dots, slides) => {
   slides.forEach((r, i) => (r.style.transform = `translateX(${i * 100}%)`));
 

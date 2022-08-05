@@ -4,7 +4,7 @@ import CustomerCard from "./CustomerCard";
 import "./Customers.css";
 
 // Images
-import Golden from "../../images/chefs/Golden Raynor.jpg";
+import Golden from "../../images/customers/2.jpg";
 
 const Customers = () => {
   const customersRef = useRef();
