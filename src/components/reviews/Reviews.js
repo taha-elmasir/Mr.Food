@@ -22,7 +22,7 @@ const Customers = () => {
   }, [reviewHeight, reviewsRef, customersRef]);
 
   return (
-    <section className='customers-section hidden' ref={customersRef}>
+    <section id='reviews-section' className='hidden' ref={customersRef}>
       <h2 className='section-heading'>Our happy customers</h2>
       <p className='section-subheading'>
         We always take care of our customers and they are very happy. <br />

@@ -1,4 +1,4 @@
-.features-section {
+#features-section {
   padding: 9.6rem 6.4rem;
   border-top: 1px solid #ddd;
   background: linear-gradient(
@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.features-section .section-subheading {
+#features-section .section-subheading {
   margin-bottom: 8rem;
 }
 

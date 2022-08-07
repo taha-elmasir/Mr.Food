@@ -4,20 +4,13 @@ import './Features.css';
 import FeatureItem from './FeatureItem';
 
 // Icons
-import {
-  Healthy,
-  Pie,
-  World,
-  Heart,
-  Lock,
-  Chef,
-} from '../../icons/features/features';
+import { Healthy, Pie, World, Heart, Lock, Chef } from '../../icons/features';
 
 const Features = () => {
   const featuresRef = useRef();
   useEffect(() => reveal(featuresRef, '60px'), [featuresRef]);
   return (
-    <section className='features-section hidden' ref={featuresRef}>
+    <section id='features-section' className='hidden' ref={featuresRef}>
       <h2 className='section-heading'>
         Mr. Food combines food with modern technology
       </h2>

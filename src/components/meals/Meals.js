@@ -7,7 +7,7 @@ const Meals = () => {
   const mealsRef = useRef();
   useEffect(() => reveal(mealsRef, '100px'), [mealsRef]);
   return (
-    <section className='meals-section hidden' ref={mealsRef}>
+    <section id='meals-section' className='hidden' ref={mealsRef}>
       <h2 className='section-heading'>Our most popular dishes</h2>
       <p className='section-subheading'>Our meals Works with any diet</p>
       <div className='meals'>

@@ -1,11 +1,16 @@
 // Scroll
 export const scroll = (e) => {
   e.preventDefault();
-  e.target.getAttribute('href') === '#' &&
+  if (e.target.getAttribute('href') === '#') {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+    return;
+  }
+  const id = e.target.getAttribute('href');
+  document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  document.querySelector('.navigation').classList.add('hidden-nav');
 };
 
 // Revealing Sections
@@ -32,7 +37,7 @@ export const slide = (dots, slides) => {
     dots.forEach((d) => d.classList.toggle('active-dot'));
     const s = dots.find((d) => d.classList.contains('active-dot'));
     document.querySelector(`.${s.dataset.slide}`).classList.remove('hidden');
-  }, 15000);
+  }, 10000);
 
   dots.forEach((d) => {
     d.addEventListener('click', (e) => {

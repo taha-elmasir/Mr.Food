@@ -6,7 +6,7 @@ const Contact = () => {
   const contactRef = useRef();
   useEffect(() => reveal(contactRef), [contactRef]);
   return (
-    <section className='contact-section hidden' ref={contactRef}>
+    <section id='contact-section' className='hidden' ref={contactRef}>
       <h2 className='section-heading'>Contact our Support Team</h2>
       <form className='form'>
         <input type='text' placeholder='Your Name' required />

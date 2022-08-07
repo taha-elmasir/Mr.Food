@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useState } from 'react';
 import { scroll } from './lib';
 
+import Navigation from './components/navigation/navigation';
 import Header from './components/header/Header';
-import Features from './components/features/Features';
 import Reviews from './components/reviews/Reviews';
+import Features from './components/features/Features';
 import Meals from './components/meals/Meals';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
@@ -22,6 +23,7 @@ const App = () => {
   });
   return (
     <Fragment>
+      <Navigation />
       <Header show={show} />
       {isShown && <Modal close={close} />}
       <main>

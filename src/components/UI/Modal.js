@@ -31,7 +31,7 @@ const ModalContent = (props) => (
   </div>
 );
 
-const Deatils = (props) => {
+const Deatils = () => {
   return (
     <div className='details'>
       <img src={meal1} alt='Meal 1' />

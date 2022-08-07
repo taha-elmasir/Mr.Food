@@ -5,7 +5,7 @@ import './MealItem.css';
 import food from '../../images/meals/Seafood paella.jpg';
 
 // Icons
-import { Clock, User, Location, Calories } from '../../icons/meals/meals';
+import { Clock, User, Location, Calories } from '../../icons/meals';
 
 const MealItem = (props) => {
   const [isShown, setIsShown] = useState(false);

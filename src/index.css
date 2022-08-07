@@ -40,7 +40,7 @@ body {
   transform: translateY(8rem);
 }
 
-.contact-section.hidden {
+#contact-section.hidden {
   transform: translateX(20%);
 }
 
@@ -54,6 +54,23 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
+
+/* Navigation */
+
+.hidden-nav .nav-background,
+.hidden-nav .nav {
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.nav-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Icons */
 
 .feature-icon {
   fill: var(--color-main);

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 3;
+  z-index: 8;
   backdrop-filter: blur(4px);
   background: rgba(0, 0, 0, 0.5);
 }
@@ -20,7 +20,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   overflow: hidden;
-  z-index: 4;
+  z-index: 9;
   animation: slide-down 300ms ease-out forwards;
 }
 
