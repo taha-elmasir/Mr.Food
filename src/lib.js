@@ -1,23 +1,23 @@
 // Scroll
 export const scroll = (e) => {
   e.preventDefault();
-  e.target.getAttribute("href") === "#" &&
+  e.target.getAttribute('href') === '#' &&
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
 };
 
-// revealing sections
+// Revealing Sections
 export const reveal = (ref, margin) => {
   const show = ([entry], observer) => {
-    entry.isIntersecting && ref.current.classList.remove("hidden");
+    entry.isIntersecting && ref.current.classList.remove('hidden');
     entry.isIntersecting && observer.unobserve(entry.target);
   };
 
   const options = {
     root: null,
-    threshold: 0.1,
+    threshold: 0,
     rootMargin: margin,
   };
 
@@ -25,27 +25,24 @@ export const reveal = (ref, margin) => {
   observer.observe(ref.current);
 };
 
-// the slider
+// Slider
 export const slide = (dots, slides) => {
-  slides.forEach((r, i) => (r.style.transform = `translateX(${i * 100}%)`));
+  setInterval(() => {
+    slides.forEach((s) => s.classList.add('hidden'));
+    dots.forEach((d) => d.classList.toggle('active-dot'));
+    const s = dots.find((d) => d.classList.contains('active-dot'));
+    document.querySelector(`.${s.dataset.slide}`).classList.remove('hidden');
+  }, 15000);
 
-  dots.forEach((d, i) => {
-    d.addEventListener("click", (e) => {
-      document
-        .querySelectorAll(".dot")
-        .forEach((d) => d.classList.remove("active-dot"));
-
-      const { nav } = e.target.dataset;
-
+  dots.forEach((d) => {
+    d.addEventListener('click', (e) => {
+      dots.forEach((d) => d.classList.remove('active-dot'));
+      slides.forEach((s) => s.classList.add('hidden'));
+      const { nav, slide } = e.target.dataset;
       document
         .querySelector(`.dot[data-nav='${nav}']`)
-        .classList.add("active-dot");
-
-      document
-        .querySelectorAll(".slide")
-        .forEach(
-          (r, i) => (r.style.transform = `translateX(${100 * (i - nav)}%)`)
-        );
+        .classList.add('active-dot');
+      document.querySelector(`.${slide}`).classList.remove('hidden');
     });
   });
 };

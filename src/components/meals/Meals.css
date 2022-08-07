@@ -1,8 +1,8 @@
 .meals-section {
   padding: 9.6rem 6.4rem;
   border-top: 1px solid #ddd;
-  background-image: linear-gradient(#101d2cd9, #101d2cd9),
-    url("../../images/meals/meals.PNG");
+  background-image: linear-gradient(#101d2ce6, #101d2ce6),
+    url('../../images/meals/restaurant.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.9s;

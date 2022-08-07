@@ -5,12 +5,16 @@
   background-color: #101d2c80;
   box-shadow: 1rem 0 3.2rem rgba(0, 0, 0, 0.8);
   background-image: linear-gradient(#101d2cd9, #101d2cd9),
-    url("../../images/reviews/restaurant.jpg");
+    url('../../images/reviews/restaurant.jpg');
   background-size: cover;
   transition: all 0.9s;
 }
 
 /* Customers Review */
+
+.customers-section .section-subheading {
+  font-size: 1.6rem;
+}
 
 .reviews {
   position: relative;
@@ -26,7 +30,7 @@
   text-align: left;
   color: #222;
   line-height: 1.8;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   position: absolute;
   transition: all 1s;
 }

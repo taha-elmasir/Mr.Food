@@ -1,24 +1,36 @@
-import { Fragment, useEffect } from "react";
-import { scroll } from "./lib";
+import { Fragment, useEffect, useState } from 'react';
+import { scroll } from './lib';
 
-import Header from "./components/header/Header";
-import Features from "./components/features/Features";
-import Customers from "./components/customers/Customers";
-import Meals from "./components/meals/Meals";
+import Header from './components/header/Header';
+import Features from './components/features/Features';
+import Reviews from './components/reviews/Reviews';
+import Meals from './components/meals/Meals';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+import Modal from './components/UI/Modal';
 
 const App = () => {
-  // Handling empty href
-  useEffect(() =>
+  const [isShown, setIsShown] = useState(false);
+  const show = () => setIsShown(true);
+  const close = () => setIsShown(false);
+
+  useEffect(() => {
+    document.querySelector('#spinner-container')?.remove();
     document
-      .querySelectorAll("a")
-      .forEach((a) => a.addEventListener("click", (e) => scroll(e)))
-  );
+      .querySelectorAll('a')
+      .forEach((a) => a.addEventListener('click', (e) => scroll(e)));
+  });
   return (
     <Fragment>
-      <Header />
-      <Customers />
-      <Features />
-      <Meals />
+      <Header show={show} />
+      {isShown && <Modal close={close} />}
+      <main>
+        <Reviews />
+        <Features />
+        <Meals />
+        <Contact />
+      </main>
+      <Footer />
     </Fragment>
   );
 };
