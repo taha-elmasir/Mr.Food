@@ -8,6 +8,7 @@
   flex-direction: column;
   row-gap: 4.5rem;
   color: #e9ecef;
+  margin: 0 auto;
 }
 
 .meal-photo img {
@@ -78,7 +79,7 @@
 .meal-text {
   grid-column: 1 / -1;
   line-height: 1.6;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .meal-item {
@@ -116,5 +117,15 @@
 .meal-ratings {
   font-size: 1.4rem;
   letter-spacing: 0.5px;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Media Queries */
+
+/* Below 1266px */
+
+@media (max-width: 79em) {
+  .meal {
+    width: 100%;
+  }
 }

@@ -1,7 +1,7 @@
 .nav-btn {
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: 5rem;
+  right: 4rem;
   width: 6rem;
   height: 6rem;
   background: var(--color-main);
@@ -12,6 +12,8 @@
   justify-content: center;
   z-index: 7;
   box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.2);
+  animation: navAnimation 0.7s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 
 .nav-background {
@@ -23,7 +25,7 @@
   background: radial-gradient(
     circle at 100%,
     #868e96,
-    #495057 50%,
+    #101d2c 50%,
     #343a40 75%,
     #212529 75%
   );
@@ -56,6 +58,10 @@
   margin-bottom: 2.4rem;
 }
 
+.nav-link:last-child {
+  margin: 0;
+}
+
 .nav-link a:link,
 .nav-link a:visited {
   display: inline-block;
@@ -79,4 +85,25 @@
 .nav-link a:active {
   background-position: 100%;
   transform: translateX(1rem);
+}
+
+@keyframes navAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+/* Below 970px */
+
+@media (max-width: 61em) {
+  .nav-btn {
+    top: 3rem;
+    right: 3rem;
+  }
 }

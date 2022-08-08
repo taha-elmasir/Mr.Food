@@ -52,3 +52,39 @@
 .active-dot {
   background-color: var(--color-main);
 }
+
+/* Media Queries */
+
+/* Below 1460px */
+
+@media (max-width: 91.25em) {
+  .review {
+    font-size: 1.6rem;
+    padding: 2.4rem 3.2rem;
+  }
+
+  .customer-details {
+    margin-bottom: 2.4rem;
+  }
+
+  .dots {
+    margin-top: 1.2rem;
+  }
+}
+
+/* Below 970px */
+
+@media (max-width: 61em) {
+  .review {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+/* Below 700px */
+
+@media (max-width: 43.625em) {
+  .review {
+    width: 80%;
+  }
+}

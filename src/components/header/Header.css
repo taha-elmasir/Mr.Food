@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 85rem;
   border-radius: 1rem;
   color: #e9ecef;
   display: grid;
@@ -26,6 +26,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--color-main);
+  animation: primaryHeading 1s ease-in;
 }
 
 .heading {
@@ -42,14 +43,16 @@
   letter-spacing: 3px;
   padding-bottom: 1.8rem;
   border-bottom: 2px solid gray;
+  animation: primaryHeading 1s ease-in;
 }
 
-.sub-heading {
+.subheading {
   font-family: 'Josefin Sans', sans-serif;
   color: var(--color-main);
   text-transform: uppercase;
   letter-spacing: 0.9rem;
   font-weight: 700;
+  animation: subheading 1s ease-in-out;
 }
 
 .heading-desc {
@@ -113,8 +116,7 @@
 }
 
 .header-right h3 {
-  grid-column: span 2;
-  margin: 0 auto 1.8rem;
+  text-transform: uppercase;
   color: var(--color-main);
   font-family: 'Rubik', sans-serif;
 }
@@ -122,7 +124,8 @@
 /* Chefs */
 
 .chefs {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   column-gap: 2rem;
   row-gap: 5vh;
   align-items: center;
@@ -130,8 +133,10 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-.chefs h3 {
-  text-transform: uppercase;
+.chef {
+  display: flex;
+  align-items: center;
+  column-gap: 1.4rem;
 }
 
 .chefs img {
@@ -193,4 +198,85 @@
 
 .customers-text span {
   color: var(--color-main);
+}
+
+@keyframes primaryHeading {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes subheading {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Media Queries */
+
+/* Below 970px */
+
+@media (max-width: 61em) {
+  .header {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  .header-left {
+    padding: 4.8rem 0;
+  }
+
+  .featured-in__images img {
+    height: 2rem;
+  }
+
+  .header-right {
+    row-gap: 3.2rem;
+    padding: 4.8rem 3.2rem;
+  }
+
+  .chefs {
+    flex-direction: row;
+  }
+}
+
+/* Below 560px */
+
+@media (max-width: 35.0625em) {
+  .heading {
+    padding: 0 1rem;
+    font-size: 1.6rem;
+  }
+
+  .subheading {
+    line-height: 1.6;
+  }
+
+  .heading-desc {
+    width: 80%;
+  }
+
+  .chefs {
+    flex-direction: column;
+  }
 }

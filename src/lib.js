@@ -44,6 +44,7 @@ export const slide = (dots, slides) => {
       dots.forEach((d) => d.classList.remove('active-dot'));
       slides.forEach((s) => s.classList.add('hidden'));
       const { nav, slide } = e.target.dataset;
+
       document
         .querySelector(`.dot[data-nav='${nav}']`)
         .classList.add('active-dot');

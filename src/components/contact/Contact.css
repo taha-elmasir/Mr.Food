@@ -44,3 +44,29 @@
   border-radius: 3px;
   background-color: #ffffff0d;
 }
+
+/* Media Queries */
+
+/* Below 842px */
+
+@media (max-width: 52.625em) {
+  #contact-section {
+    padding: 4.8rem;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+}
+
+/* Below 700px */
+
+@media (max-width: 43.625em) {
+  .form {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  .form input {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

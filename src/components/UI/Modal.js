@@ -4,9 +4,6 @@ import './Modal.css';
 
 // Images
 import meal1 from '../../images/meals/meal 1.jpg';
-import meal2 from '../../images/meals/meal 2.jpg';
-import meal3 from '../../images/meals/meal 3.jpg';
-import meal4 from '../../images/meals/meal 4.jpg';
 
 const Backdrop = (props) => <div className='backdrop' onClick={props.close} />;
 
@@ -31,16 +28,11 @@ const ModalContent = (props) => (
   </div>
 );
 
-const Deatils = () => {
-  return (
-    <div className='details'>
-      <img src={meal1} alt='Meal 1' />
-      <img src={meal2} alt='Meal 2' />
-      <img src={meal3} alt='Meal 3' />
-      <img src={meal4} alt='Meal 4' />
-    </div>
-  );
-};
+const Deatils = () => (
+  <div className='details'>
+    <img src={meal1} alt='Meal 1' />
+  </div>
+);
 
 const portalEl = document.querySelector('#overlays');
 

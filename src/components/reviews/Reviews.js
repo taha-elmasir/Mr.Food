@@ -8,33 +8,29 @@ import customer1 from '../../images/customers/2.jpg';
 import customer2 from '../../images/customers/1.jpg';
 
 const Customers = () => {
-  const customersRef = useRef();
-  const reviewsRef = useRef();
-  const reviewHeight = useRef();
+  const reviewRef = useRef();
   const arr = [1, 2, 3];
 
   useEffect(() => {
-    reviewsRef.current.style.height = reviewHeight.current.offsetHeight + 'px';
     const dots = Array.from(document.querySelectorAll('.dot'));
     const slides = document.querySelectorAll('.slide');
+    reveal(reviewRef, '100px');
     slide(dots, slides);
-    reveal(customersRef, '100px');
-  }, [reviewHeight, reviewsRef, customersRef]);
+  }, [reviewRef]);
 
   return (
-    <section id='reviews-section' className='hidden' ref={customersRef}>
+    <section id='reviews-section' className='hidden' ref={reviewRef}>
       <h2 className='section-heading'>Our happy customers</h2>
       <p className='section-subheading'>
         We always take care of our customers and they are very happy. <br />
         We've collected some stories for your.
       </p>
 
-      <div className='reviews' ref={reviewsRef}>
+      <div className='reviews'>
         <div className='slide slide-1'>
           {arr.map((arr) => (
             <ReviewCard
               key={arr}
-              ref={reviewHeight}
               img={customer1}
               name='Emma Watsons'
               job='Creative Market'
@@ -59,8 +55,18 @@ const Customers = () => {
       </div>
 
       <div className='dots'>
-        <button className='dot active-dot' data-nav='0' data-slide='slide-1' />
-        <button className='dot' data-nav='1' data-slide='slide-2' />
+        <button
+          className='dot active-dot'
+          data-nav='0'
+          data-slide='slide-1'
+          aria-label='Navigate Slider to left'
+        />
+        <button
+          className='dot'
+          data-nav='1'
+          data-slide='slide-2'
+          aria-label='Navigate Slider to right'
+        />
       </div>
     </section>
   );

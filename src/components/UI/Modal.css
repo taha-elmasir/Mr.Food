@@ -28,8 +28,6 @@
 
 .details {
   padding: 0;
-  display: grid;
-  grid-template-columns: 50% 50%;
 }
 
 .details img {
@@ -90,6 +88,8 @@
   }
 }
 
+/* Media Queries */
+
 /* Below 900px */
 
 @media (max-width: 56.25em) {
@@ -97,7 +97,20 @@
     padding: 3.6rem;
   }
 
-  .content h2 {
+  .modal-heading {
     font-size: 2.8rem;
+  }
+}
+
+/* Below 560px */
+
+@media (max-width: 35.0625em) {
+  .modal-heading {
+    font-size: 2rem;
+  }
+
+  .modal-form {
+    display: flex;
+    flex-direction: column;
   }
 }
